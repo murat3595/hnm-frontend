@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from "react-slick";
 import {
     MDBContainer,
@@ -16,7 +16,45 @@ function MainPageComponent() {
         slidesToScroll: 4,
       };
 
+      const [activeItems, setActiveItems] = useState("All");
+
+      const [categories, setCategories] = useState([]);
+
+      window.categories = categories;
+      window.setCategories = setCategories;
+      /*
+    useEffect(() => {
+      fetch('http://localhost:777/getcategories', {
+        method: 'post',
+        body: {
+        },
+      })
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        window.setCategories(response);
+        console.log("asdas",window.categories);
+        })
+    }, [])
+*/
+
+
+
+
+
     return  <MDBContainer className="p-5  d-flex flex-column w-75 d-flex align-items-stretch">
+      
+            <div className="btn-toolbar mx-auto" role="toolbar" aria-label="Toolbar with button groups">
+                {/*categories.map(item => <button key={item} type="button" className="btn btn-primary"  data-mdb-ripple-init>{item}</button>)*/}
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+    <button type="button" class="btn btn-primary"  data-mdb-ripple-init>3</button>
+            </div>
+
             <Slider {...settings}>
                 <div >
                 <h3 style={{height:200, width:"100%"}}>1</h3>

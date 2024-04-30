@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState("searchPage"); //mainPage searchPage detailPage
+  const [currentPage, setCurrentPage] = useState("detailPage"); //mainPage searchPage detailPage
   
   const [pageData, setPageData] = useState(undefined);
 
@@ -17,8 +17,6 @@ function App() {
   window.setCurrentPage = setCurrentPage;
   window.pageData = pageData;
   window.setPageData = setPageData;
-
-
 
   return (
     <>

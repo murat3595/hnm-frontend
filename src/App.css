@@ -43,3 +43,8 @@
   margin-top: 2rem;
   display: flex;
 }
+
+.navbar {
+  z-index: 500000;
+  background-color: white;
+}
